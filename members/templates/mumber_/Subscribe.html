@@ -1,0 +1,219 @@
+{% load static %}
+{% load bootstrap5 %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static  './css/Subscribe_.css' %}">
+    <link rel="stylesheet" href="{% static  './css/bootstrap.css' %}">
+
+    <link rel="stylesheet"   href="{% static  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+    <title>Subscribe</title>
+
+</head>
+<body>
+
+
+    <div class="contener">
+        <section class="top">
+            <div class="left">
+              <div class="socila_">
+
+                <!-- Add font awesome icons -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+
+
+              </div>
+            </div>
+            <div class="center">
+                <div class="sereash">
+                    <div class="serearsh_icone"></div>
+                    <div class="speas"></div>
+                    <div class="anthing">
+                        <div class="inp">
+                          <ul>
+                            <li><a href="{%url 'homes:index_' %}">HOME</a></li>
+                            <li><a>clent</a></li>
+                            <li><a>abuot</a></li>
+                            <li><a>help</a></li>
+                          </ul>
+                        </div>
+  
+                      </div>
+                </div>
+                <div class="parson">
+                   <div class="tops">
+                      <div class="img_header">
+                          <div class="img_">
+                            <div class="luyout_black">hi</div>
+
+                            <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img src="./img/Add1.webp" style="width:100%">
+                                  <div class="text">العقل السليم في الجسم <br><span style="color: rgb(102, 6, 25);">السليم</span></div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img src="./img/add3.jpg" style="width:100%">
+                                  <div class="text">ألعب دائما من أجل الفوز ، سواء كان هذا خلال التدريب<br><span style="color: rgb(100, 4, 23);">أو المباراة الحقيقية</span> </div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img src="./img/Add4.jpg" style="width:100%">
+                                  <div class="text">optionss Three</div>
+                                </div>
+                                
+                                </div>
+                                <br>
+                                
+                                <div style="text-align:center">
+                                  <span class="dot"></span> 
+                                  <span class="dot"></span> 
+                                  <span class="dot"></span> 
+                                </div>
+                            
+                            </div>
+                      </div>
+                      <div class="itme">
+                          <div class="itmes">
+
+                           
+                            <div class="formss">
+                              <h3> Add New Mumber</h3>
+
+                              <form  action="" method="post"  enctype='multipart/form-data'>
+                                {% csrf_token %}
+                            
+                                {% bootstrap_form form %}
+                                {% buttons %}
+                                
+                                <input type="submit" value="Submit">
+                                {% endbuttons %}
+                              </form>
+            
+                              
+                              </div>
+                            </div>
+                          
+                       
+
+                       
+                            
+                      </div>
+
+                   </div>
+                   <div class="btoom">test</div>
+                </div>
+            </div>
+            <div class="right">
+
+                <div class="opti">
+                    <select>
+                      <option class="op" value="volvo">EN</option>
+                      <option class="op" value="saab">عربي</option>
+                    
+                    </select> 
+                  </div>
+
+                <div class="header"></div>
+                <div class="down">
+                    <div class="top_">
+                      <p>Lorem ipsum<br> dolor sit amet consectetur adipisicing elit.<br> Consectetur</p>
+                    </div>
+
+                    <div class="down_">
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+                        
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+
+
+                       
+
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+
+                        <div class="end_ntfictions">
+                          <div class="icone"></div>
+                          <div class="little_info">
+                            test
+                          </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    
+    <script src="{%static './js/index_.js'%}"></script>
+</body>
+</html>

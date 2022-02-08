@@ -1,0 +1,191 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static  './css/index_.css' %}">
+    <link rel="stylesheet"   href="{% static  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+    <title>index</title>
+</head>
+<body style="  background: url('./static/img/32.jpg') 100% 0 no-repeat fixed;"> 
+    
+
+    
+
+  <div class="contener">
+        <section class="top">
+            <div class="left">
+              <div class="socila_">
+
+                <!-- Add font awesome icons -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+
+
+              </div>
+            </div>
+            <div class="center">
+                <div class="sereash">
+                    <div class="serearsh_icone"></div>
+                    <div class="speas"></div>
+                    <div class="anthing">
+                        <div class="inp">
+                          <ul>
+                            <li><a id='home'>HOME</a></li>
+                            <li><a id='members'>members</a></li>
+                            <li><a id="about">about</a></li>
+                            <li><a id="help">help</a></li>
+                          </ul>
+                        </div>
+  
+                      </div>
+                </div>
+                <div id="right_" class="parson">
+                   <div class="tops">
+                      <div class="img_header">
+                          <div class="img_">
+                            <div class="luyout_black">hi</div>
+
+                            <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img src="{%  static './img/333.gif' %}" style="width:100%">
+                                  <div class="text"><br>MERCAP GYM<br><span style="color: rgb(26, 141, 55);">مركاب جيم  </span></div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img src="{%  static './img/33.jpg' %}" style="width:100%">
+
+                                  <div class="text">MERCAP GYM<br> ألعب دائما من أجل الفوز ، سواء كان هذا خلال التدريب<br><span style="color: rgb(182, 35, 64);">أو المباراة الحقيقية</span> </div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img src="{%  static './img/31.jpg' %}" style="width:100%">
+
+                                  <div class="text"><br>MERCAP GYM<br>مركاب جيم</div>
+                                </div>
+                                
+                                </div>
+                                <br>
+                                
+                                <div style="text-align:center">
+                                  <span class="dot"></span> 
+                                  <span class="dot"></span> 
+                                  <span class="dot"></span> 
+                                </div>
+                            
+                            </div>
+                      </div>
+                      <div class="itme">
+                          
+                        <div class="container">
+                            <div class="card">
+                              <div class="box">
+                                <div class="content">
+                                  <h2>M</h2>
+                                  <h3 id="man">MAN</h3>
+                                  <p id="info_">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+                                  <a id="Goto" href="{% url 'member:all_members'%}">GO TO</a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="card">
+                              <div class="box">
+                                <div class="content">
+                                  <h2 id="New">New</h2>
+                                  <h3 id="add_new">Add New</h3>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+                                  <a id="add_newd" href="{% url 'member:Add_mumber'%}">Add </a>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            <div class="card">
+                              <div class="box">
+                                <div class="content">
+                                  <h2>WE</h2>
+                                  <h3 id="weman">WEMAN</h3>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+                                  <a id="Goto_" href="{% url 'member:all_members'%}">GO TO</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                       
+                            
+                      </div>
+
+                   </div>
+                   <div class="btoom">test</div>
+                </div>
+            </div>
+            <div  id = "right_" class="right">
+
+                <div class="header">
+                  <div class="opti">
+                    <select id="select_">
+                      <option onclick="change_to_AR()" value="EN">EN</option>
+                      <option onclick="change_to_AR()" value="AR">عربي</option>
+                    
+                    </select> 
+                  </div>
+                </div>
+                <div class="down">
+                    <div class="top_">
+                      <p>Lorem ipsum<br> dolor sit amet consectetur adipisicing elit.<br> Consectetur</p>
+                    </div>
+
+                    <div  style="color: rgb(255, 255, 255);" class="down_">
+
+                      {% for j in all_mum_ %}
+                      {% if j.money < 7000 %}
+
+                        <div style="background: linear-gradient(to right , #4b908bd2, #e91e62c7);" class="end_ntfictions">
+                          <div class="icone">
+                            <img style="width: 80px; height: 80px; border-radius: 5px;" class='img_jobs' src="{{j.image.url}}" alt="">
+
+                          </div>
+                          <div style="display: flex; justify-content: space-between;" class="little_info">
+                            <div class="little_1">
+                              <h5 style="margin: 5px;">{{j.name}}</h5>
+                              <h5 style="margin: 5px;"> SUD:{{j.money}}K</h5>
+
+
+                            </div>
+                            <div style="float: right;" class="little_2">
+                              <a style="background-color:  rgb(197, 219, 226);  margin: 15px; font-size: 12px; display: inline-block;  padding: 4px; border-radius: 10px;" href="{%url 'member:detalis_members' j.id%}">more</a>
+                            </div>
+                          </div>
+
+                        </div>
+                      {% endif %}
+                      {% endfor %}
+                       
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+  </div>
+
+
+    
+
+
+
+  <script src="{%static './js/index_.js'%}"></script>
+</body>
+</html>

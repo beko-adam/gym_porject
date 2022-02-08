@@ -1,0 +1,547 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body{
+  background: url("/static/img/32.jpg") 100% 0 no-repeat fixed;
+  object-position: center;
+  object-fit: fill;
+}
+
+
+
+.top{
+    background: linear-gradient(to top , #bbbabdb0, #0a0a0a9a);
+    margin: auto;
+    margin-top: 5rem;
+    width: 70rem;
+    height: 50rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contener .top .left{
+    width: 5%;
+    height: 100%;
+
+
+}
+
+
+.contener .top .center{
+    width: 75%;
+    height: 100%;
+    
+    position: relative;
+
+}
+
+
+.contener .top .right{
+    width: 25%;
+    height: 100%;
+    
+    background: linear-gradient(to top , #bbbabdb0, #0a0a0a00);
+
+}
+
+.contener .top .center .sereash{
+    width: 100%;
+    height: 5%;
+    display: flex;
+}
+
+.contener .top .center .sereash .serearsh_icone{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(220, 220, 221);
+}
+
+.contener .top .center .sereash .serearsh_icone .inp, .contener .top .center .sereash .anthing .inp{
+    padding: 10px;
+ 
+}
+.contener .top .center .sereash .serearsh_icone .inp, .contener .top .center .sereash .anthing .inp ul{
+    display: flex;
+    flex-direction: row;
+
+
+}
+a, li{
+    list-style: none;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+    transition: 0.5s;
+}
+
+.contener .top .center .sereash .serearsh_icone .inp, .contener .top .center .sereash .anthing .inp ul li:hover{
+    background-color: rgb(104, 49, 104);
+    border-radius: 5px;
+}
+.contener .top .center .sereash .speas{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(220, 220, 221, 0.383);
+}
+
+.contener .top .center .sereash .anthing{
+    width: 35%;
+    height: 100%;
+    background-color: rgba(220, 220, 221, 0.383);
+}
+
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 1;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  opacity: 0.5;
+
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  opacity: 0.5;
+
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  opacity: 0.5;
+
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  opacity: 0.5;
+
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  opacity: 0.5;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+.socila_{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
+
+.contener .top .center .parson{
+    width: 100%;
+    height: 95%;
+   
+    
+    
+}
+
+.contener .top .center .parson .tops{
+    width: 100%;
+    height: 80%;
+    position: relative;
+
+}
+
+.contener .top .center .parson .tops .luyout_black{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.835);
+  margin-left: 0px;
+  margin-top: 0;
+  z-index: 2;
+  
+  position: absolute;
+}
+.contener .top .center .parson .img_header{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(47, 47, 47);
+    position: relative;
+}
+
+
+.contener .top .center .parson .img_header .img_{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+.contener .top .center .parson .img_header .img_::before{
+   
+    background-color: blueviolet;
+    position: absolute;
+
+}
+
+
+.contener .top .center .parson .img_header .img_ img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.contener .top .center .parson .itme{
+    width: 100%;
+    height: 80%;
+    background-color: rgb(23, 24, 23);
+}
+
+
+
+.contener .top .center .parson .btoom{
+
+    width: 100%;
+    height: 20%;
+    background-color: rgba(17, 16, 16, 0.787);
+
+}
+
+.contener .top  .right .header{
+
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 127, 80, 0);
+}
+
+.contener .top  .right .down{
+
+    width: 100%;
+    height: 70%;
+}
+
+.contener .top  .right .down .top_{
+
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.contener .top  .right .down .top_ p{
+  position: absolute;
+  margin-top: 10px;
+  
+  
+}
+.contener .top  .right .down .down_{
+
+    width: 98%;
+    height: 80%;
+    
+    overflow: auto;
+
+}
+
+.contener .top  .right .down .down_ .end_ntfictions{
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to right , #9ca1b39d, #070606);
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+
+}
+
+.contener .top  .right .down .down_ .end_ntfictions .icone{
+  width: 30%;
+  height: 100%;
+  background-color: azure;
+}
+
+.contener .top  .right .down .down_ .end_ntfictions .little_info{
+  width: 70%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow containers */
+.slideshow-containers {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  text-shadow: 2px 2px 8px #63b2d6;
+  transition: 1.5s;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+.itme {
+  position: relative;
+  width: 100%;
+  height: 100%;}
+.itmes {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+  margin: 5px;
+}
+
+body .container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .container .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin: 6px ;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: radial-gradient(#221f1f93 ,#d1cfcff1 );
+
+}
+
+input[type=submit] {
+  width: 100%;
+  height: 30px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 2px;
+  margin: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.formss {
+  width: 70%;
+
+  border-radius: 5px;
+  background-color: #11101094;
+  padding: 5px;
+  color: white;
+  margin: auto;
+
+
+  
+}
+
+.op{
+    display: none;
+    display: block;
+  }

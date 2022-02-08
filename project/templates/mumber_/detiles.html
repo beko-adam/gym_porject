@@ -1,0 +1,217 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static  './css/detiles_.css' %}">
+    <link rel="stylesheet"   href="{% static  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}">
+
+    <title>details</title>
+</head>
+<body style="  background: url('./static/img/32.jpg') 100% 0 no-repeat fixed;"> 
+  <div class="contener">
+        <section class="top">
+            <div class="left">
+                <div class="socila_">
+
+                    <!-- Add font awesome icons -->
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+    
+    
+                  </div>
+            </div>
+            <div class="center">
+                <div class="sereash">
+                    <div class="serearsh_icone"></div>
+                    <div class="speas"></div>
+                    <div class="anthing">
+                        <div class="inp">
+                          <ul>
+                            <li><a href="{%url 'homes:index_' %}">HOME</a></li>
+                            <li><a>clent</a></li>
+                            <li><a>abuot</a></li>
+                            <li><a>help</a></li>
+                          </ul>
+                        </div>
+  
+                      </div>
+                </div>
+                <div class="parson">
+                   <div class="tops">
+                       <div class="left_tops">
+                           <div class="img_part">
+                               <div class="img_contenr">
+                                <img style="width: 100%; height: 100%; border-radius: 50%;" class='img_jobs' src="{{detalis_memb.image.url}}" alt="">
+                              </div>
+                              {% if date_long.days >= 31 %}
+                               <div class="sup_contenr">
+                                   <div  style="background-color: rgb(223, 43, 43); color: rgb(27, 26, 26);"  class="sub_icone"><h5><a href="{% url 'member:Editr_Mumber_usb' detalis_memb.id  %}">Unubscribe</a></h5></div>
+                               
+                               </div>
+
+                               {% else %}
+                               <div  class="sup_contenr">
+                                <div style="background-color: rgb(57, 136, 71); color: rgb(27, 26, 26);" class="sub_icone"><h5><a href="{% url 'member:Editr_Mumber_usb' detalis_memb.id  %}">Subscribe</a></h5></div>
+                            
+                            </div>
+
+                               {% endif %}
+                           </div>
+                           <div dir="ltr" class="info_part">
+                            <div class="table" >
+                                <h4 style="padding: 10px;">abuot clent </h4>
+                                <ul>
+                                    <li>name   : <span class="spa_">{{detalis_memb.name}}</span></li>
+                                    <li>mumber :<span class="spa_">{{detalis_memb.phone}}</span></li>
+                                    <li>data   : <span style="color: rgb(219, 23, 23); background-color: white;" class="spa_">{{detalis_memb.data_sub}}</span></li>
+                                    <li>money : <span class="spa_">{{data_sub.money}}</span></li>
+                                    <li>ID     :<span class="spa_">{{detalis_memb.id_num}}</span></li>
+                                    <li>type   :<span class="spa_">{{detalis_memb.sex_type}}</span></li>
+                                    <li>grops   : <span class="spa_">{{detalis_memb.gruop}}</span></li>
+                                    
+                                </ul> 
+                            </div>
+                           </div>
+                       </div>
+                       <div class="right_tops">
+                           <div class="ntftions">
+                            <div class="main-container">
+                                <div class="heading">
+                                </div>
+                                <div class="cards">
+                                
+                            
+                                 
+                                  <div class="card card-5">
+                                    <div class="card__icon"><i class="fas fa-bolt"></i></div>
+                                    <p class="card__exit"><i class="fas fa-times"></i></p>
+                                    <h2 class="card__title">Ut aliquip ex ea commodo consequat. Duis aute irure dolor.<br> Day <samp style="color: rgb(223, 43, 43);">{{ date_long.days}}</samp> </h2>
+                                    <p class="card__apply">
+                                    <a class="card__link" href="{% url 'member:Editr_Mumber' detalis_memb.id %}">Edit </a>
+                                    </p>
+                                  </div>
+                                  
+                                </div>
+                            </div>
+
+
+                           </div>
+                       </div>
+
+                   </div>
+                   <div class="btoom"></div>
+                </div>
+            </div>
+            <div class="right">
+              <div class="opti">
+                <select>
+                  <option value="volvo">EN</option>
+                  <option value="saab">عربي</option>
+                
+                </select> 
+              </div>
+
+                <div onload="startTime()" class="clender">
+
+                    <div class="container">
+                      <div class="card_s">
+                        <div class="front">
+                          <div class="contentfront">
+                            <div class="month">
+                              <table>
+                                <tr class="orangeTr">
+                                  <th>M</th>
+                                  <th>T</th>
+                                  <th>W</th>
+                                  <th>T</th>
+                                  <th>F</th>
+                                  <th>S</th>
+                                  <th>S</th>
+                                </tr>
+                                <tr class="whiteTr">
+                                  <th></th>
+                                  <th>1</th>
+                                  <th>2</th>
+                                  <th>3</th>
+                                  <th>4</th>
+                                  <th>5</th>
+                                  <th>6</th>
+                                </tr>
+                                <tr class="whiteTr">
+                                  <th>7</th>
+                                  <th>8</th>
+                                  <th>9</th>
+                                  <th>10</th>
+                                  <th>11</th>
+                                  <th>12</th>
+                                  <th>13</th>
+                                </tr>
+                                <tr class="whiteTr">
+                                  <th>14</th>
+                                  <th>15</th>
+                                  <th>16</th>
+                                  <th>17</th>
+                                  <th>18</th>
+                                  <th>19</th>
+                                  <th>20</th>
+                                </tr>
+                                <tr class="whiteTr">
+                                  <th>21</th>
+                                  <th>22</th>
+                                  <th>23</th>
+                                  <th>24</th>
+                                  <th>25</th>
+                                  <th>26</th>
+                                  <th>27</th>
+                                </tr>
+                                <tr class="whiteTr">
+                                  <th>28</th>
+                                  <th>29</th>
+                                  <th>30</th>
+                                  <th>31</th>
+                                  <th></th>
+                                  <th></th>
+                                  <th></th>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="date">
+                              <div class="datecont">
+                                <div id="date"></div>
+                                <div id="day"></div>
+                                <div id="month"></div>
+                                <i class="fa fa-pencil edit" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="back">
+                          <div class="contentback">
+                            <div class="backcontainer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+    
+    
+    
+    
+                  </div>
+
+            </div>
+        </section>
+    </div>
+    
+    <script src="{%static './js/detile_.js'%}"></script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static  './css/home_.css'%}">
+    <link rel="stylesheet"   href="{% static  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}">
+
+    <title>home</title>
+</head>
+</head>
+<body style="  background: url('./static/img/32.jpg') 100% 0 no-repeat fixed;"> 
+    <div class="contener">
+      
+        <section class="top">
+            <div class="left">
+              <div class="socila_">
+
+
+                <!-- Add font awesome icons -->
+                <a  href="{%url 'homes:index_' %}" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+
+
+              </div>
+            </div>
+            <div class="center">
+                <div class="sereash">
+                    <div class="serearsh_icone">
+                      <div class="inp"><input type="text"></div>
+
+                    </div>
+                    <div class="speas"></div>
+                    <div class="anthing">
+                      <div class="inp">
+                        <ul>
+                          <li><a href="{%url 'homes:index_' %}">HOME</a></li>
+                          <li><a>clent</a></li>
+                          <li><a>abuot</a></li>
+                          <li><a>help</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+
+                </div>
+                <div class="parson">
+
+                  <div class="itmes__">
+                    
+                    {% for i, b2 in my_st %}
+                    
+                    {% if b2 >= 31 %}
+
+                    <div class="card_s" style="    background: linear-gradient(to right , #6b2b1e, #d64646ea);" >
+                      <div class="row ">
+                        <div class="col1">
+                          <img style="width: 150px; height: 70px; border-radius: 10px;" class='img_jobs' src="{{i.image.url}}" alt="">
+                        </div>
+                        <div class="col2">
+                          <div class="card-body">
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <p class="card-text"> data of ex is it {{i.data_sub}}.</p>
+                            <h5> {{i.money}}K, SUD<samp>EX_day = {{b2}}</samp><h5>
+                            </div>
+                            {% if i.money < 7000 %}
+                            <div class="Appl">
+                              <p  class="card-text"><small class="text-muted"><a style="background-color: rgba(223, 139, 62, 0.911); display: inline-block; "  href="{%url 'member:detalis_members' i.id%}">more det</a></small></p>
+  
+                            </div>
+                            {% else %}
+                            <div class="Appl">
+                              <p  class="card-text"><small class="text-muted"><a style="background-color: rgb(57, 156, 38); display: inline-block; "  href="{%url 'member:detalis_members' i.id%}">more det</a></small></p>
+  
+                            </div>
+                            {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                    {% else %}
+                    <div class="card_s" style="background-color: rgb(42, 71, 49);" >
+                      <div class="row ">
+                        <div class="col1">
+                          <img style="width: 150px; height: 70px; border-radius: 10px;" class='img_jobs' src="{{i.image.url}}" alt="">
+                        </div>
+
+                        <div class="col2">
+                          <div class="card-body">
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <p class="card-text"> data of ex is it {{i.data_sub}}.</p>
+                            <h5> {{i.money}}K, SUD <samp>EX_day = {{b2}}</samp><h5>
+                          
+                          </div>
+                          {% if i.money < 7000 %}
+                          <div class="Appl">
+                            <p  class="card-text"><small class="text-muted"><a style="background-color: rgba(236, 171, 49, 0.911); display: inline-block; "  href="{%url 'member:detalis_members' i.id%}">more det</a></small></p>
+
+                          </div>
+                          {% else %}
+                          <div class="Appl">
+                            <p  class="card-text"><small class="text-muted"><a style="background-color: rgb(57, 156, 38); display: inline-block; "  href="{%url 'member:detalis_members' i.id%}">more det</a></small></p>
+
+                          </div>
+                          {% endif %}
+
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {% endif %}
+                    {%endfor%}
+  
+               
+            
+                   
+
+                  </div>
+
+                    <!-- pagination_wrap here -->
+
+
+                    {% if all_mem.has_other_pages %}
+
+                      <div class="dots_">
+                        {% if all_mem.has_previous %}
+                          <span class="dot"><a href="?page={{ all_mem.previous_page_number }}"> < </a> </span> 
+                        {% endif %}
+
+                        {% for x in all_mem.paginator.page_range %}
+                          <span class="dot"> <a href="?page={{x}}"><span>{{x}}</span></a></span> 
+                        {% endfor %}
+
+
+                        {% if all_mem.has_next %}
+                          <span class="dot">  <a href="?page={{ all_mem.paginator.num_pages }}"> > </a>  </span> 
+                        {% endif %}
+                      </div>
+                      {% endif %}
+                </div>
+            </div>
+            <div class="right">
+              <div class="opti">
+                <select>
+                  <option value="volvo">EN</option>
+                  <option value="saab">عربي</option>
+                
+                </select> 
+              </div>
+              <div onload="startTime()" class="clender">
+
+                <div class="container">
+                  <div class="card">
+                    <div class="front">
+                      <div class="contentfront">
+                        <div class="month">
+                          <table>
+                            <tr class="orangeTr">
+                              <th>M</th>
+                              <th>T</th>
+                              <th>W</th>
+                              <th>T</th>
+                              <th>F</th>
+                              <th>S</th>
+                              <th>S</th>
+                            </tr>
+                            <tr class="whiteTr">
+                              <th></th>
+                              <th>1</th>
+                              <th>2</th>
+                              <th>3</th>
+                              <th>4</th>
+                              <th>5</th>
+                              <th>6</th>
+                            </tr>
+                            <tr class="whiteTr">
+                              <th>7</th>
+                              <th>8</th>
+                              <th>9</th>
+                              <th>10</th>
+                              <th>11</th>
+                              <th>12</th>
+                              <th>13</th>
+                            </tr>
+                            <tr class="whiteTr">
+                              <th>14</th>
+                              <th>15</th>
+                              <th>16</th>
+                              <th>17</th>
+                              <th>18</th>
+                              <th>19</th>
+                              <th>20</th>
+                            </tr>
+                            <tr class="whiteTr">
+                              <th>21</th>
+                              <th>22</th>
+                              <th>23</th>
+                              <th>24</th>
+                              <th>25</th>
+                              <th>26</th>
+                              <th>27</th>
+                            </tr>
+                            <tr class="whiteTr">
+                              <th>28</th>
+                              <th>29</th>
+                              <th>30</th>
+                              <th>31</th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="date">
+                          <div class="datecont">
+                            <div id="date"></div>
+                            <div id="day"></div>
+                            <div id="month"></div>
+                            <i class="fa fa-pencil edit" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="contentback">
+                        <div class="backcontainer">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+
+              </div>
+            </div>
+
+
+
+        </section>
+    </div>
+    
+
+    <script src="{%static './js/home_.js'%}"></script>
+
+</body>
+</html>

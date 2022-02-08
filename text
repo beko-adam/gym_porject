@@ -1,0 +1,15 @@
+
+                          {% if i.money < 7000 %}
+                          <div class="Appl">
+                            <p  class="card-text"><small class="text-muted"><a style="background-color: rgb(231, 166, 67); display: inline-block; "  href="{%url 'member:detalis_members' i.id%}">more det</a></small></p>
+
+                          </div>
+                          {% else %}
+                          <div class="Appl">
+                            <p  class="card-text"><small class="text-muted"><a style="background-color: rgb(94, 231, 67); display: inline-block; "  href="{%url 'member:detalis_members' i.id%}">more det</a></small></p>
+
+                          </div>
+                          {% endif %}
+
+
+                          position: absolute; 
